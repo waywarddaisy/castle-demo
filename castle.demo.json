@@ -1,0 +1,706 @@
+
+{
+
+  "Title": "Product - Demo",
+
+  "SubTitle": "ABCD : Test Demo Product",
+
+  "PageTitle": "ABCD  | Demo",
+
+  "Record": [
+
+    {
+
+      "Name": "RowIndex",
+
+      "Label": "Row",
+
+      "DisplayValue": "1",
+
+      "ClassList": null
+
+    },
+
+    {
+
+      "Name": "ItemCode",
+
+      "Label": "Item Code",
+
+      "DisplayValue": "ABCD",
+
+      "ClassList": null
+
+    },
+
+    {
+
+      "Name": "Description",
+
+      "Label": "Description",
+
+      "DisplayValue": "Test Demo Product",
+
+      "ClassList": null
+
+    },
+
+    {
+
+      "Name": "UnitPrice",
+
+      "Label": "Unit Price",
+
+      "DisplayValue": "$12.00",
+
+      "ClassList": null
+
+    },
+
+    {
+
+      "Name": "Weight",
+
+      "Label": "Weight",
+
+      "DisplayValue": "1,500",
+
+      "ClassList": null
+
+    },
+
+    {
+
+      "Name": "Color",
+
+      "Label": "Color",
+
+      "DisplayValue": "Orange",
+
+      "ClassList": null
+
+    },
+
+    {
+
+      "Name": "QtyPerCarton",
+
+      "Label": "Qty Per Carton",
+
+      "DisplayValue": null,
+
+      "ClassList": null
+
+    },
+
+    {
+
+      "Name": "Packable",
+
+      "Label": "Packable",
+
+      "DisplayValue": "True",
+
+      "ClassList": null
+
+    },
+
+    {
+
+      "Name": "ClientCode",
+
+      "Label": "Client Code",
+
+      "DisplayValue": null,
+
+      "ClassList": null
+
+    }
+
+  ],
+
+  "PageMenu": [
+
+    {
+
+      "DisplayValue": "Demo",
+
+      "ClassList": [
+
+        "ps"
+
+      ],
+
+      "Endpoint": "/User/Queues/3"
+
+    },
+
+    {
+
+      "DisplayValue": "Inventory Report",
+
+      "ClassList": [
+
+        "inventory secondary"
+
+      ],
+
+      "Endpoint": "/InventoryReports/Inventory/3"
+
+    },
+
+    {
+
+      "DisplayValue": "Imported Purchase Orders",
+
+      "ClassList": [
+
+        "importpo"
+
+     ],
+
+      "Endpoint": "/ImportedPurchaseOrder/List/3"
+
+    },
+
+    {
+
+      "DisplayValue": "Products",
+
+      "ClassList": [
+
+        "product",
+
+        "selected"
+
+      ],
+
+      "Endpoint": "/Castle/Product/List/ProductSet/3"
+
+    },
+
+    {
+
+      "DisplayValue": "Purchase Orders",
+
+      "ClassList": [
+
+        "po"
+
+      ],
+
+      "Endpoint": "/Castle/PurchaseOrder/List/ProductSet/3"
+
+    },
+
+    {
+
+      "DisplayValue": "Packing Slips",
+
+      "ClassList": [
+
+        "ps"
+
+      ],
+
+      "Endpoint": "/Castle/PackingSlip/List/ProductSet/3"
+
+    },
+
+    {
+
+      "DisplayValue": "Inventory Placeholders",
+
+      "ClassList": [
+
+        "ph"
+
+      ],
+
+      "Endpoint": "/Castle/InventoryContainerPlaceholder/List/ProductSet/3"
+
+    },
+
+    {
+
+      "DisplayValue": "Factory Orders",
+
+      "ClassList": [
+
+        "fo"
+
+      ],
+
+      "Endpoint": "/Castle/FactoryOrder/List/ProductSet/3"
+
+    },
+
+    {
+
+      "DisplayValue": "Client Commitments",
+
+      "ClassList": [
+
+        "cc"
+
+      ],
+
+      "Endpoint": "/Castle/ClientCommitment/List/ProductSet/3"
+
+    },
+
+    {
+
+      "DisplayValue": "Inbound Shipments",
+
+      "ClassList": [
+
+        "ic"
+
+      ],
+
+      "Endpoint": "/Castle/InboundContainer/List/ProductSet/3"
+
+    },
+
+    {
+
+      "DisplayValue": "Replacement Claims",
+
+      "ClassList": [
+
+        "crc"
+
+      ],
+
+      "Endpoint": "/Castle/CarrierReplacementClaim/List/ProductSet/3"
+
+    },
+
+    {
+
+      "DisplayValue": "Inventory Adjustments",
+
+      "ClassList": [
+
+        "ia"
+
+      ],
+
+      "Endpoint": "/Castle/InventoryAdjustment/List/ProductSet/3"
+
+    },
+
+    {
+
+      "DisplayValue": "Stock Transfers",
+
+      "ClassList": [
+
+        "st"
+
+      ],
+
+      "Endpoint": "/Castle/StockTransfer/List/ProductSet/3"
+
+    }
+
+  ],
+
+  "PageLinks": [
+
+    {
+
+      "DisplayValue": "Edit",
+
+      "ClassList": [],
+
+      "Endpoint": "/Castle/Product/Edit/ProductSet/3/1032"
+
+    },
+
+    {
+
+      "DisplayValue": "Product Sets",
+
+      "ClassList": [],
+
+      "Endpoint": "/Castle/ProductSet/List"
+
+    },
+
+    {
+
+      "DisplayValue": "Demo",
+
+      "ClassList": [],
+
+      "Endpoint": "/Castle/ProductSet/Edit/3"
+
+    },
+
+    {
+
+      "DisplayValue": "Back To List",
+
+      "ClassList": [],
+
+      "Endpoint": "/Castle/Product/List/ProductSet/3"
+
+    }
+
+  ],
+
+  "PageTabs": [
+
+    {
+
+      "DisplayValue": "Cartons",
+
+      "ClassList": [],
+
+      "Endpoint": "/Castle/ProductCarton/ItemList/Product.Cartons/1032?allowEditActions=False"
+
+    },
+
+    {
+
+      "DisplayValue": "Child Products",
+
+      "ClassList": [],
+
+      "Endpoint": "/Castle/ChildProduct/ItemList/Product.PackableItems/1032?allowEditActions=False"
+
+    },
+
+    {
+
+      "DisplayValue": "Parent Products",
+
+      "ClassList": [],
+
+      "Endpoint": "/Castle/ParentProduct/ItemList/Product.ParentProducts/1032?allowEditActions=False"
+
+    },
+
+    {
+
+      "DisplayValue": "Diagrams",
+
+      "ClassList": [],
+
+      "Endpoint": "/Castle/ProductDiagram/ItemList/Product.Diagrams/1032?allowEditActions=False"
+
+    },
+
+    {
+
+      "DisplayValue": "Icons",
+
+      "ClassList": [],
+
+      "Endpoint": "/Castle/ProductIcon/ItemList/Product.Icons/1032?allowEditActions=False"
+
+    },
+
+    {
+
+      "DisplayValue": "Tags",
+
+      "ClassList": [],
+
+      "Endpoint": "/Castle/ProductProductTag/ItemList/Product.Tags/1032?allowEditActions=False"
+
+    },
+
+    {
+
+      "DisplayValue": "Client Product Codes",
+
+      "ClassList": [],
+
+      "Endpoint": "/Castle/ClientProductItemCode/ItemList/Product.ClientCodes/1032?allowEditActions=False"
+
+    },
+
+    {
+
+      "DisplayValue": "Inventory",
+
+      "ClassList": [
+
+        "inv"
+
+      ],
+
+      "Endpoint": "/Castle/ProductInventory/ItemList/Product.Inventory/1032?allowEditActions=False"
+
+    },
+
+    {
+
+      "DisplayValue": "Inventory With Placeholders",
+
+      "ClassList": [
+
+        "inv"
+
+      ],
+
+      "Endpoint": "/Castle/ProductInventory/ItemList/Product.InventoryWithPlaceholders/1032?allowEditActions=False"
+
+    },
+
+    {
+
+      "DisplayValue": "Warehouse Inventory",
+
+      "ClassList": [
+
+        "inv"
+
+      ],
+
+      "Endpoint": "/Castle/ProductLocationInventory/ItemList/Product.WarehouseInventory/1032?allowEditActions=False"
+
+    },
+
+    {
+
+      "DisplayValue": "Allocation",
+
+      "ClassList": [
+
+        "allo"
+
+      ],
+
+      "Endpoint": "/Castle/ProductAllocation/ItemList/Product.Allocation/1032?allowEditActions=False"
+
+    },
+
+    {
+
+      "DisplayValue": "SPJ Allocation",
+
+      "ClassList": [
+
+        "allo-spj"
+
+      ],
+
+      "Endpoint": "/Castle/ProductAllocation/ItemList/Product.SPJAllocation/1032?allowEditActions=False"
+
+    },
+
+    {
+
+      "DisplayValue": "Summary",
+
+      "ClassList": [
+
+        "allo"
+
+      ],
+
+      "Endpoint": "/Castle/ProductAllocationSummary/ItemList/Product.Summary/1032?allowEditActions=False"
+
+    },
+
+    {
+
+      "DisplayValue": "Client Commitments",
+
+      "ClassList": [
+
+        "cc"
+
+      ],
+
+      "Endpoint": "/Castle/ClientCommitmentItemView/ItemList/Product.ClientCommitments/1032?allowEditActions=False"
+
+    },
+
+    {
+
+      "DisplayValue": "Factory Orders",
+
+      "ClassList": [
+
+        "fo"
+
+      ],
+
+      "Endpoint": "/Castle/FactoryOrderItemView/ItemList/Product.FactoryOrders/1032?allowEditActions=False"
+
+    },
+
+    {
+
+      "DisplayValue": "Inbound Shipments",
+
+      "ClassList": [
+
+        "ic"
+
+      ],
+
+      "Endpoint": "/Castle/InboundShipmentItemView/ItemList/Product.InboundShipments/1032?allowEditActions=False"
+
+    },
+
+    {
+
+      "DisplayValue": "Inventory Adjustments",
+
+      "ClassList": [
+
+        "ia"
+
+      ],
+
+      "Endpoint": "/Castle/InventoryAdjustmentItemView/ItemList/Product.InventoryAdjustments/1032?allowEditActions=False"
+
+    },
+
+    {
+
+      "DisplayValue": "Purchase Orders",
+
+      "ClassList": [
+
+        "po"
+
+      ],
+
+      "Endpoint": "/Castle/PurchaseOrderItemView/ItemList/Product.PurchaseOrders/1032?allowEditActions=False"
+
+    },
+
+    {
+
+      "DisplayValue": "Packing Slips",
+
+      "ClassList": [
+
+        "ps"
+
+      ],
+
+      "Endpoint": "/Castle/PackingSlipItemView/ItemList/Product.PackingSlips/1032?allowEditActions=False"
+
+    },
+
+    {
+
+      "DisplayValue": "Stock Transfers",
+
+      "ClassList": [
+
+        "st"
+
+      ],
+
+      "Endpoint": "/Castle/StockTransferItemView/ItemList/Product.StockTransfers/1032?allowEditActions=False"
+
+    },
+
+    {
+
+      "DisplayValue": "Replacement Claims",
+
+      "ClassList": [
+
+        "crc"
+
+      ],
+
+      "Endpoint": "/Castle/CarrierReplacementClaimItemView/ItemList/Product.ReplacementClaims/1032?allowEditActions=False"
+
+    },
+
+    {
+
+      "DisplayValue": "History",
+
+      "ClassList": [
+
+        "history"
+
+      ],
+
+      "Endpoint": "/Castle/CastleDataObjectHistoryView/ItemList/Product.HistoryWithRelated/1032?allowEditActions=False"
+
+    }
+
+  ],
+
+  "InventoryTags": [
+
+    {
+
+      "Name": null,
+
+      "Label": null,
+
+      "DisplayValue": "1 Factory",
+
+      "ClassList": [
+
+        "factory-inventory"
+
+      ]
+
+    },
+
+    {
+
+      "Name": null,
+
+      "Label": null,
+
+      "DisplayValue": "2 USA",
+
+      "ClassList": [
+
+        "warehouse-inventory"
+
+      ]
+
+    },
+
+    {
+
+      "Name": null,
+
+      "Label": null,
+
+      "DisplayValue": "-9 Final",
+
+      "ClassList": [
+
+        "final-allocation"
+
+      ]
+
+    },
+
+    {
+
+      "Name": null,
+
+      "Label": null,
+
+      "DisplayValue": "0 RPL Avg",
+
+      "ClassList": [
+
+        "rpl-average"
+
+      ]
+
+    }
+
+  ]
+
+}

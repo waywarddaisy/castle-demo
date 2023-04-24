@@ -1,0 +1,55 @@
+html, body {
+    box-sizing: border-box;
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 10px;
+}
+.page-content {
+    display: flex;
+    justify-content: center;
+
+}
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-menu-button {
+    width: 19rem;
+    padding: 1.5rem 0;
+    margin-top: .5rem;
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+}
+
+.product-header {
+    /* position: fixed; */
+    background-color: white;
+}
+
+#product-nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+
+}
+
+#product-nav a {
+    text-decoration: none;
+    color: black;
+
+}
+
+#product-nav li {
+    margin-right: 5px;
+
+}
+
+
+
+
+
