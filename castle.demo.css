@@ -4,10 +4,9 @@ html, body {
     font-family: sans-serif;
     font-size: 10px;
 }
-.page-content {
+#top-section {
     display: flex;
-    justify-content: center;
-
+    justify-content: space-around;
 }
 
 .menu-container {
