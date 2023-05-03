@@ -1,8 +1,14 @@
+//helper function for iterating through classes
+let getClassList =(item)=>{
+    let thisClass = '';
+    item.ClassList.forEach(nameClass => {thisClass+=`${nameClass} `});
+    return thisClass;
+};
 
 const createMenuButtons = (item) => {
     let menuContainer = document.getElementById('menu-container');
     let menuLink = document.createElement('a');
-    menuLink.className = `page-menu-button ${item.ClassList}`;
+    menuLink.className = `page-menu-button ${getClassList(item)}`;
     menuLink.href = item.Endpoint;
     menuLink.innerHTML = item.DisplayValue;
     menuContainer.appendChild(menuLink);
@@ -52,7 +58,7 @@ const createRightPanel = () => {
 
     //parent products
     let rightParentProducts = document.createElement('div');
-    rightParentProducts.id = "Parent Products";
+    rightParentProducts.id = "parent-products";
     rightPanel.appendChild(rightParentProducts);
 };
 
@@ -65,7 +71,7 @@ const populateRightPanel = (data) => {
         let button = document.createElement('button');
         button.type = "button";
         button.innerHTML = item.DisplayValue;
-        button.className = "right-panel-row";
+        button.className = `right-panel-row ${item.ClassList}`;
         let rightRow = document.getElementById('right-panel-row');
         rightRow.appendChild(button);
 
@@ -81,7 +87,7 @@ const populateRightPanel = (data) => {
         let button = document.createElement('button');
         button.innerHTML = item.DisplayValue;
         button.type = "button";
-        button.className = "pricing-button";
+        button.className = `pricing-button ${getClassList(item)}`;
         NSO.appendChild(button)
     });
 
@@ -94,8 +100,8 @@ const populateRightPanel = (data) => {
         let button = document.createElement('button');
         button.innerHTML = item.DisplayValue;
         button.type = "button";
-        button.className = "pricing-button";
-        SPJ.appendChild(button)
+        button.className = `pricing-button ${getClassList(item)}`;
+        SPJ.appendChild(button);
     });
 
     //diagram
@@ -126,7 +132,7 @@ const populateRightPanel = (data) => {
 
     //Parent Products
 
-    let parentProductsDiv = document.getElementById('Parent Products');
+    let parentProductsDiv = document.getElementById('parent-products');
     let pProductsHeader = document.createElement('h4');
     pProductsHeader.innerHTML = "Parent Products";
     parentProductsDiv.appendChild(pProductsHeader);

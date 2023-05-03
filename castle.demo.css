@@ -1,33 +1,133 @@
 html, body {
     box-sizing: border-box;
     width: 100%;
-    font-family: sans-serif;
-    font-size: 10px;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 #top-section {
     display: flex;
-    justify-content: space-around;
+
 }
 
+/* colors_______________________________________________ */
+
+.ps, .po {
+    background-color: #d4e8ff;
+}
+
+.importpo {
+    background-color: #e9f3ff;
+}
+
+.product{
+    background-color: #d8d8d8;
+} 
+
+
+.ph {
+    background-color: #fffff4;
+}
+
+.fo {
+    background-color: #ffe1e1;
+}
+
+.cc {
+    background-color: #e9f9ff;
+}
+
+.ic {
+    background-color: #fff0c5;
+}
+
+.crc {
+    background-color: #d4e8ff;
+}
+
+.ia {
+    background-color: #dfd3ff;
+}
+
+.st {
+    background-color: #f2ffd3;
+}
+
+.warehouse-inventory {
+    background-color: #91b8ff;
+}
+
+.factory-inventory {
+    background-color: #ffffdc;
+}
+
+.final-allocation {
+    background-color: #fff2f2;
+}
+
+.rpl-average {
+    background-color: #f0f7ff;
+}
+
+.nso {
+    background-color: #ffffd0;
+}
+
+.spj {
+    background-color: #ffeeda;
+}
+
+/* menu section------------------------------------------------ */
 .menu-container {
     display: flex;
     flex-direction: column;
+    width: 20%;
+    align-items:center;
 }
 
 .page-menu-button {
-    width: 19rem;
-    padding: 1.5rem 0;
-    margin-top: .5rem;
+    width: 14rem;
+    font-size: .95rem;
+    padding: 1rem 0rem;
+    margin-top: .25rem;
     border: none;
     font-weight: bold;
     text-decoration: none;
     color: black;
     text-align: center;
+    border: 1px solid whitesmoke;
 }
 
+.page-menu-button:hover {
+    background: rgba(0, 0, 0, .25);
+}
+
+/* product section -----------------------------------------*/
+
+.product-div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0% 5%;
+}
 .product-header {
-    /* position: fixed; */
+    position: fixed;
     background-color: white;
+    width: 100%;
+    margin-top: -10px;
+}
+
+.header-text {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    line-height: .25rem;
+    margin-top: 2rem;
+}
+
+.header-text h2 {
+    font-weight: normal;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 #product-nav ul{
@@ -39,16 +139,157 @@ html, body {
 
 #product-nav a {
     text-decoration: none;
-    color: black;
+    color: #2c6fae;
 
+}
+
+#subtitle {
+    color: #838383;
+    font-weight: normal;
 }
 
 #product-nav li {
-    margin-right: 5px;
+    margin-right: 10px; 
+}
+
+#product-nav li + li:before{
+    content: " | ";
+    padding: 0 10px;
+    color:#d8d8d8;
+}
+
+
+#product-nav li:hover {
+    text-decoration: underline;
 
 }
 
 
+/* scroll section------------- */
+
+.scroll-section {
+    margin-top: 13%;
+    display: flex;
+    width: 100%;
+}
+
+/* product-info section___________________________________ */
+.product-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    font-size: .95rem;
+    font-weight: bold;
+}
+
+.info-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 40px;
+    column-gap: 2rem;
+}
+
+.info-key {
+grid-column: 1/1;
+color: #838383;
+text-align: right;
+}
+
+.info-value {
+    grid-column: 2/2;
+
+}
+/* right-panel_____________________________________________ */
+#right-panel {
+    width: 50%;
+}
+
+#right-panel button {
+    border: none;
+    margin-left: .5rem;
+    padding: .25rem 1.5rem;
+    border-radius: 5%;
+    font-weight: bold;
+    
+
+}
+
+#nso-rpl {
+    display: flex;
+    align-items: center;
+    font-size: .95rem;
+    height: 2.5rem;
+    
+}
+
+#spj {
+    display: flex;
+    align-items: center;
+    font-size: .95rem;
+    height: 2.5rem;
+    
+}
+
+.right-cartons-parent-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 30px;
+    font-size: .95rem;
+}
+
+#cartons {
+    background-color: #ebf5ff;
+    padding: 1rem;
+    margin-top: 5%;
+    border-radius: 2%;
+    font-weight: bold;
+    width: 60%;
+   
+}
+
+#cartons h4, #parent-products h4{
+    margin: 0;
+}
+
+#parent-products {
+    background-color: #f4f3f4;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 2%;
+    font-weight: bold;
+    width: 60%;
+}
+
+#cartons h4, #parent-products h4 {
+    color: #838383;
+}
 
 
 
+/* bottom tabs section _____________________________*/
+
+#bottom-tabs{
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:flex-start;
+    margin: 2rem 10%;
+    
+}
+#bottom-tabs a{
+    text-decoration: none;
+    color: #838383;
+    font-weight: normal;
+    font-size: .9rem;
+    padding: .02rem .9rem;
+    border: 1px solid #ddd;
+    border-bottom: transparent;
+    margin-top: 1px;
+    border-radius: .25rem .25rem 0 0;
+    line-height: 2.8rem;
+}
+
+#bottom-tabs a:hover {
+    background: rgba(0, 0, 0, .25);
+}
