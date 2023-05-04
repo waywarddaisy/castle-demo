@@ -116,6 +116,8 @@ const populateRightPanel = (data) => {
     let cartonsHeader = document.createElement('h4');
     cartonsHeader.innerHTML = "Cartons";
     cartonsDiv.appendChild(cartonsHeader);
+    let line = document.createElement('hr');
+    cartonsDiv.appendChild(line);
     data.Cartons.forEach(item=> {
         let section = document.createElement('div');
         section.className = "right-cartons-parent-section";
@@ -136,6 +138,8 @@ const populateRightPanel = (data) => {
     let pProductsHeader = document.createElement('h4');
     pProductsHeader.innerHTML = "Parent Products";
     parentProductsDiv.appendChild(pProductsHeader);
+    let lineTwo = document.createElement('hr');
+    parentProductsDiv.appendChild(lineTwo);
     data.ParentProducts.forEach(item=> {
         let section = document.createElement('div');
         section.className = "right-cartons-parent-section";
