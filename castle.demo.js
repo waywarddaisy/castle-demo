@@ -1,11 +1,12 @@
 //helper function for iterating through classes
+
 let getClassList =(item)=>{
     let thisClass = '';
     item.ClassList.forEach(nameClass => {thisClass+=`${nameClass} `});
     return thisClass;
 };
 
-const createMenuButtons = (item) => {
+const createMenuButtons = (item) => { 
     let menuContainer = document.getElementById('menu-container');
     let menuLink = document.createElement('a');
     menuLink.className = `page-menu-button ${getClassList(item)}`;
@@ -14,7 +15,7 @@ const createMenuButtons = (item) => {
     menuContainer.appendChild(menuLink);
 };
 
-const createMenu = (data) => {
+const createMenu = (data) => { 
     let menuArray = data.PageMenu;
     console.log(menuArray);
     menuArray.forEach(item => {
@@ -22,47 +23,47 @@ const createMenu = (data) => {
     });
 };
 
-const createRightPanel = () => {
-    let rightPanel = document.getElementById('right-panel');
+const createRightPanel = () => { 
+    let rightPanel = document.getElementById('right-panel'); 
     //Top row div
     let rightRow = document.createElement('div');
     rightRow.id = "right-panel-row";
     rightPanel.appendChild(rightRow);
 
-    //Pricing Div
+    //Pricing Div 
     let rightPricing = document.createElement('div');
     rightPricing.className = "right-pricing";
     rightPanel.appendChild(rightPricing);
 
-    //NSO/RPL Pricing
+    //NSO/RPL Pricing 
     let nsoRPL = document.createElement('div');
     nsoRPL.className = "pricing";
     nsoRPL.id = "nso-rpl";
     rightPricing.appendChild(nsoRPL);
 
-    //sjp pricing
+    //sjp pricing 
     let sjp = document.createElement('div');
     sjp.className = "pricing";
     sjp.id = "spj";
     rightPricing.appendChild(sjp);
 
-    //diagram div 
+    //diagram div  
     let rightImgDiv = document.createElement('div');
     rightImgDiv.id = 'right-image-div';
     rightPanel.appendChild(rightImgDiv);
 
-    //cartons
+    //cartons 
     let rightCartonsDiv = document.createElement('div');
     rightCartonsDiv.id = "cartons";
     rightPanel.appendChild(rightCartonsDiv);
 
-    //parent products
+    //parent products 
     let rightParentProducts = document.createElement('div');
     rightParentProducts.id = "parent-products";
     rightPanel.appendChild(rightParentProducts);
 };
 
-const populateRightPanel = (data) => {
+const populateRightPanel = (data) => {  
     createRightPanel();
     //row
     let rightPanelData = data.InventoryTags;
@@ -77,7 +78,7 @@ const populateRightPanel = (data) => {
 
     });
 
-    //NSO/RPL Pricing
+    //NSO/RPL Pricing 
 
     let NSO = document.getElementById('nso-rpl');
     let nsoHeader = document.createElement('h4');
@@ -91,7 +92,7 @@ const populateRightPanel = (data) => {
         NSO.appendChild(button)
     });
 
-    //SPJ Pricing
+    //SPJ Pricing 
     let SPJ = document.getElementById('spj');
     let spjHeader = document.createElement('h4');
     spjHeader.innerHTML = "SPJ Pricing:";
@@ -104,14 +105,14 @@ const populateRightPanel = (data) => {
         SPJ.appendChild(button);
     });
 
-    //diagram
+    //diagram 
     let rightImgDiv = document.getElementById('right-image-div');
     let rightImg = document.createElement('img');
     let imgValue = data.PageTabs.find(item => item.DisplayValue === 'Diagrams');
     rightImg.href = imgValue.Endpoint;
     rightImgDiv.appendChild(rightImg);
 
-    //Cartons
+    //Cartons 
     let cartonsDiv = document.getElementById('cartons');
     let cartonsHeader = document.createElement('h4');
     cartonsHeader.innerHTML = "Cartons";
@@ -132,7 +133,7 @@ const populateRightPanel = (data) => {
         cartonsDiv.appendChild(section);
     });
 
-    //Parent Products
+    //Parent Products 
 
     let parentProductsDiv = document.getElementById('parent-products');
     let pProductsHeader = document.createElement('h4');
@@ -156,7 +157,7 @@ const populateRightPanel = (data) => {
 
 };
 
-const createBottomTabs = (data) => {
+const createBottomTabs = (data) => { 
     let bottomTabs = document.getElementById('bottom-tabs');
     data.PageTabs.forEach(item => {
         let newTab = document.createElement('a');
@@ -168,7 +169,7 @@ const createBottomTabs = (data) => {
 
 };
 
-const createProductHeader = (data) => {
+const createProductHeader = (data) => { 
     let productName = document.getElementById("product-title");
     productName.innerHTML = data.Title;
     let productSubtitle = document.getElementById("subtitle");
@@ -188,7 +189,7 @@ const createProductHeader = (data) => {
 
 };
 
-const createProductInfo = (data) => {
+const createProductInfo = (data) => { 
     let prodInfoDiv = document.getElementById('product-info');
     let prodInfoArray = data.Record;
     prodInfoArray.forEach(record => {
@@ -207,7 +208,7 @@ const createProductInfo = (data) => {
 };
 
 
-const populatePage = () => {
+const populatePage = () => { 
     const getJSON = async () => {
         try {
             const response = await fetch('./castle.demo.json');
