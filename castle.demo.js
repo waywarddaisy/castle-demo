@@ -1,3 +1,4 @@
+
 //helper function for iterating through classes
 let getClassList =(item)=>{
     let thisClass = '';
