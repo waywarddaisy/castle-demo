@@ -15,7 +15,7 @@ const createMenuButtons = (item) => {
 };
 
 const createMenu = (data) => {
-    let menuArray = data.PageMenu;
+    const menuArray = data.PageMenu;
     console.log(menuArray);
     menuArray.forEach(item => {
         createMenuButtons(item)
